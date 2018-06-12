@@ -1,0 +1,15 @@
+name: nginx
+version: 0+dev.2
+commit_hash: "9147481"
+uncommitted_changes: true
+jobs:
+- name: nginx
+  version: 27b1363656c748027666189569f0721f082a419c
+  fingerprint: 27b1363656c748027666189569f0721f082a419c
+  sha1: 4038ae6df6e0394f19da4e97977c1d863b0eae36
+packages:
+- name: nginx
+  version: 6378ad39b5a79aa846574bf3fe482b65447fefd0
+  fingerprint: 6378ad39b5a79aa846574bf3fe482b65447fefd0
+  sha1: dd8ad9b4e725d2eb4e2a3eaa6995334a00c56cb2
+  dependencies: []
