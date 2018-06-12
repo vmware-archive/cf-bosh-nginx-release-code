@@ -11,11 +11,13 @@ stemcells:
 
 instance_groups:
 - name: nginx
-  instances: 1
+  instances: 2
   azs: [z1]
   jobs:
   - name: nginx
     release: nginx
+    properties:
+        index: <html><body><p>It Works!</p></body></html>
   vm_type: small
   stemcell: default
   networks:
