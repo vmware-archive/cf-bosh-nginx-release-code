@@ -1,0 +1,30 @@
+name: nginx
+
+releases:
+- name: nginx
+  version: latest
+
+stemcells:
+- alias: default
+  os: ubuntu-trusty
+  version: 3586.18   # Use a specific version in case of errors
+
+instance_groups:
+- name: nginx
+  instances: 2
+  azs: [z1]
+  jobs:
+  - name: nginx
+    release: nginx
+    properties:
+        index: <html><body><p>It Works!</p></body></html>
+  vm_type: small
+  stemcell: default
+  networks:
+  - name: default
+
+update:
+  canaries: 1
+  max_in_flight: 10
+  canary_watch_time: 1000-30000
+  update_watch_time: 1000-30000
