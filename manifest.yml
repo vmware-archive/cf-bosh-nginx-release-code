@@ -7,7 +7,7 @@ releases:
 stemcells:
 - alias: default
   os: ubuntu-trusty
-  version: latest
+  version: 3586.16
 
 instance_groups:
 - name: nginx
@@ -16,8 +16,6 @@ instance_groups:
   jobs:
   - name: nginx
     release: nginx
-    properties:
-        index: <html><body><p>It Works!</p></body></html>
   vm_type: small
   stemcell: default
   networks:

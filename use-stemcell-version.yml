@@ -1,4 +1,0 @@
-stemcells:
-- alias: default
-  os: ubuntu-trusty
-  version: 3586.18   # Use a specific version in case of errors
