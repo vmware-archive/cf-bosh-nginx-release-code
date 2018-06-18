@@ -11,7 +11,7 @@ stemcells:
 
 instance_groups:
 - name: nginx
-  instances: 2
+  instances: 1
   azs: [z1]
   jobs:
   - name: nginx
