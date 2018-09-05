@@ -22,6 +22,7 @@ instance_groups:
     release: nginx
     properties:
       nginx_conf: |
+        user nobody vcap; # group vcap can read /var/vcap/store
         events {
           worker_connections  1024;
         }
