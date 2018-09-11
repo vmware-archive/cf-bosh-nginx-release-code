@@ -39,9 +39,9 @@ instance_groups:
         NGINX_DIR=/var/vcap/store/nginx
         if [ ! -d $NGINX_DIR ]; then
           mkdir -p $NGINX_DIR
+          cd $NGINX_DIR
+          echo  '<html><body><p>Hello World</p></body></html>' > index.html
         fi
-        cd $NGINX_DIR
-        echo  '<html><body><p>Hello World</p></body></html>' > index.html
 
 update:
   canaries: 1
